@@ -20,6 +20,11 @@
       "Name": "OrderDto",
       "Properties": [
         {
+          "Name": "approvalNumber",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
           "Name": "expectedStartDate",
           "Type": "string",
           "IsRequired": false
