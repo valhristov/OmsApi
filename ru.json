@@ -1544,6 +1544,68 @@
         "deprecated": false
       }
     },
+    "/api/v2/antiseptic/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.ANTISEPTIC"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/api/v2/antiseptic/report/info": {
       "get": {
         "tags": [
@@ -3205,6 +3267,68 @@
         "deprecated": false
       }
     },
+    "/api/v2/beer/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.BEER"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/api/v2/beer/report/info": {
       "get": {
         "tags": [
@@ -4588,6 +4712,68 @@
             "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
             "schema": {
               "type": "object"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v2/bicycle/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.BICYCLE"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
             }
           },
           "400": {
@@ -6141,6 +6327,68 @@
         "deprecated": false
       }
     },
+    "/api/v2/bio/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.BIO"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/api/v2/bio/report/info": {
       "get": {
         "tags": [
@@ -6459,10 +6707,10 @@
           {
             "name": "limit",
             "in": "query",
-            "description": "Document index (\u0418\u043D\u0434\u0435\u043A\u0441 \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430, \u0441 \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u043F\u043E\u043B\u0443\u0447\u0430\u0442\u044C \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B)",
+            "description": "Number of records(\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0437\u0430\u043F\u0438\u0441\u0435\u0439 \u0432 \u043E\u0442\u0432\u0435\u0442\u0435)",
             "required": false,
             "type": "integer",
-            "default": 0,
+            "default": 10,
             "format": "int32",
             "allowEmptyValue": false
           },
@@ -6477,10 +6725,10 @@
           {
             "name": "skip",
             "in": "query",
-            "description": "Number of records(\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0437\u0430\u043F\u0438\u0441\u0435\u0439 \u0432 \u043E\u0442\u0432\u0435\u0442\u0435)",
+            "description": "Document index (\u0418\u043D\u0434\u0435\u043A\u0441 \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430, \u0441 \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u043F\u043E\u043B\u0443\u0447\u0430\u0442\u044C \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B)",
             "required": false,
             "type": "integer",
-            "default": 10,
+            "default": 0,
             "format": "int32",
             "allowEmptyValue": false
           }
@@ -6672,6 +6920,68 @@
             "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
             "schema": {
               "type": "object"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v2/light/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.LIGHT"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
             }
           },
           "400": {
@@ -8040,6 +8350,68 @@
             "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
             "schema": {
               "type": "object"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v2/lp/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.LP"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
             }
           },
           "400": {
@@ -9441,6 +9813,68 @@
             "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
             "schema": {
               "type": "object"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v2/meat/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.MEAT"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
             }
           },
           "400": {
@@ -11064,6 +11498,68 @@
         "deprecated": false
       }
     },
+    "/api/v2/milk/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.MILK"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/api/v2/milk/report/info": {
       "get": {
         "tags": [
@@ -12465,6 +12961,68 @@
         "deprecated": false
       }
     },
+    "/api/v2/nabeer/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.NABEER"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/api/v2/nabeer/report/info": {
       "get": {
         "tags": [
@@ -13577,7 +14135,7 @@
           },
           {
             "in": "body",
-            "name": "orderDto",
+            "name": "orderDtoNcp",
             "description": "Order Description (\u0411\u0438\u0437\u043D\u0435\u0441-\u0437\u0430\u043A\u0430\u0437)",
             "required": true,
             "schema": {
@@ -14052,6 +14610,68 @@
             "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
             "schema": {
               "type": "object"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v2/ncp/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.NCP"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
             }
           },
           "400": {
@@ -15675,6 +16295,68 @@
         "deprecated": false
       }
     },
+    "/api/v2/otp/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.OTP"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/api/v2/otp/report/info": {
       "get": {
         "tags": [
@@ -17210,6 +17892,68 @@
         "deprecated": false
       }
     },
+    "/api/v2/perfum/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.PERFUM"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/api/v2/perfum/report/info": {
       "get": {
         "tags": [
@@ -18611,6 +19355,68 @@
         "deprecated": false
       }
     },
+    "/api/v2/petfood/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.PETFOOD"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/api/v2/petfood/report/info": {
       "get": {
         "tags": [
@@ -19994,6 +20800,68 @@
             "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
             "schema": {
               "type": "object"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v2/pharma/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.PHARMA"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
             }
           },
           "400": {
@@ -21547,6 +22415,68 @@
         "deprecated": false
       }
     },
+    "/api/v2/photo/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.PHOTO"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/api/v2/photo/report/info": {
       "get": {
         "tags": [
@@ -22930,6 +23860,68 @@
             "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
             "schema": {
               "type": "object"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v2/seafood/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.SEAFOOD"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
             }
           },
           "400": {
@@ -24483,6 +25475,68 @@
         "deprecated": false
       }
     },
+    "/api/v2/shoes/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.SHOES"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/api/v2/shoes/report/info": {
       "get": {
         "tags": [
@@ -25884,6 +26938,68 @@
         "deprecated": false
       }
     },
+    "/api/v2/softdrinks/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.SOFTDRINKS"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/api/v2/softdrinks/report/info": {
       "get": {
         "tags": [
@@ -27267,6 +28383,68 @@
             "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
             "schema": {
               "type": "object"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v2/tires/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.TIRES"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
             }
           },
           "400": {
@@ -28890,6 +30068,68 @@
         "deprecated": false
       }
     },
+    "/api/v2/tobacco/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.TOBACCO"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/api/v2/tobacco/report/info": {
       "get": {
         "tags": [
@@ -30291,6 +31531,68 @@
         "deprecated": false
       }
     },
+    "/api/v2/toys/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.TOYS"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/api/v2/toys/report/info": {
       "get": {
         "tags": [
@@ -31674,6 +32976,68 @@
             "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
             "schema": {
               "type": "object"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v2/vegs/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.VEGS"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
             }
           },
           "400": {
@@ -33297,6 +34661,68 @@
         "deprecated": false
       }
     },
+    "/api/v2/water/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.WATER"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/api/v2/water/report/info": {
       "get": {
         "tags": [
@@ -34205,7 +35631,7 @@
           },
           {
             "in": "body",
-            "name": "orderDto",
+            "name": "orderDtoWheelchairs",
             "description": "Order Description (\u0411\u0438\u0437\u043D\u0435\u0441-\u0437\u0430\u043A\u0430\u0437)",
             "required": true,
             "schema": {
@@ -34680,6 +36106,68 @@
             "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
             "schema": {
               "type": "object"
+            }
+          },
+          "400": {
+            "description": "Request failed. Incorrect parameters. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          },
+          "500": {
+            "description": "Request failed. Internal Server Error. (\u041E\u043F\u0435\u0440\u0430\u0446\u0438\u044F \u043D\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0430. \u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F \u043E\u0448\u0438\u0431\u043A\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430)",
+            "schema": {
+              "$ref": "#/definitions/OmsRestResult"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v2/wheelchairs/receipts/receipt/search": {
+      "post": {
+        "tags": [
+          "API.v2.WHEELCHAIRS"
+        ],
+        "summary": "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438 \u043F\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u043C \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u043A\u0432\u0438\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+        "operationId": "getTxManagerFilteredReceiptsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "clientToken",
+            "in": "header",
+            "description": "Authorization token (\u0422\u043E\u043A\u0435\u043D \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438)",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "filteredRequestReceipt",
+            "description": "filter (\u0424\u0438\u043B\u044C\u0442\u0440)",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FilteredRequestReceipt"
+            }
+          },
+          {
+            "name": "omsId",
+            "in": "query",
+            "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
+            "required": true,
+            "type": "string",
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request result (\u041A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u044F)",
+            "schema": {
+              "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
             }
           },
           "400": {
@@ -35945,6 +37433,27 @@
         }
       },
       "title": "DropoutReportDtoWater"
+    },
+    "FilteredRequestReceipt": {
+      "type": "object",
+      "properties": {
+        "filter": {
+          "$ref": "#/definitions/Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int32",
+          "example": 10,
+          "description": "Limit docs. (\u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435, \u043A\u043E\u0442\u043E\u0440\u043E\u0435 \u0443\u0441\u0442\u0430\u043D\u0430\u0432\u043B\u0438\u0432\u0430\u0435\u0442 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0437\u0430\u043F\u0438\u0441\u0435\u0439 \u0432 \u043E\u0442\u0432\u0435\u0442\u0435, \u043D\u0435 \u0431\u043E\u043B\u0435\u0435 100 \u0437\u0430\u043F\u0438\u0441\u0435\u0439. \u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u043F\u043E \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E 10)"
+        },
+        "skip": {
+          "type": "integer",
+          "format": "int32",
+          "example": 1,
+          "description": "Skip docs. (\u041D\u043E\u043C\u0435\u0440 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u044B (\u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u0434\u043B\u044F \u043F\u043E\u0441\u0442\u0440\u0430\u043D\u0438\u0447\u043D\u043E\u0433\u043E \u0432\u044B\u0432\u043E\u0434\u0430). \u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u043F\u043E \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E: 1.)"
+        }
+      },
+      "title": "FilteredRequestReceipt"
     },
     "OMSIdentifier": {
       "type": "object",
@@ -39571,6 +41080,141 @@
       },
       "title": "ReportStatusDto"
     },
+    "Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)": {
+      "type": "object",
+      "properties": {
+        "endCreateDocDate": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1632480396000,
+          "description": "Transaction search range by creation date of the source document, end date. (\u0414\u0438\u0430\u043F\u0430\u0437\u043E\u043D \u043F\u043E\u0438\u0441\u043A\u0430 \u0442\u0440\u0430\u043D\u0437\u0430\u043A\u0446\u0438\u0439 \u043F\u043E \u0434\u0430\u0442\u0435 \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u044F \u0438\u0441\u0445\u043E\u0434\u043D\u043E\u0433\u043E \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430, \u0434\u0430\u0442\u0430 \u043E\u043A\u043E\u043D\u0447\u0430\u043D\u0438\u044F)"
+        },
+        "endStartDocDate": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1632480396000,
+          "description": "Transaction search range by transaction start date, end date. (\u0414\u0438\u0430\u043F\u0430\u0437\u043E\u043D \u043F\u043E\u0438\u0441\u043A\u0430 \u0442\u0440\u0430\u043D\u0437\u0430\u043A\u0446\u0438\u0439 \u043F\u043E \u0434\u0430\u0442\u0435 \u043D\u0430\u0447\u0430\u043B\u0430 \u0442\u0440\u0430\u043D\u0437\u0430\u043A\u0446\u0438\u0438, \u0434\u0430\u0442\u0430 \u043E\u043A\u043E\u043D\u0447\u0430\u043D\u0438\u044F)"
+        },
+        "orderIds": {
+          "type": "array",
+          "example": [
+            "f49075a7-e997-4642-89da-6b6facc15f0a"
+          ],
+          "description": "Order ID, array of strings. (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0437\u0430\u043A\u0430\u0437\u0430, \u043C\u0430\u0441\u0441\u0438\u0432 \u0441\u0442\u0440\u043E\u043A)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "productGroups": {
+          "type": "array",
+          "example": [
+            "milk"
+          ],
+          "description": "Product group code specified for the transaction, array (\u041A\u043E\u0434 \u0442\u043E\u0432\u0430\u0440\u043D\u043E\u0439 \u0433\u0440\u0443\u043F\u043F\u044B \u0443\u043A\u0430\u0437\u0430\u043D\u043D\u044B\u0439 \u0434\u043B\u044F \u0442\u0440\u0430\u043D\u0437\u0430\u043A\u0446\u0438\u0438, \u043C\u0430\u0441\u0441\u0438\u0432)",
+          "items": {
+            "type": "string",
+            "enum": [
+              "lp",
+              "shoes",
+              "tobacco",
+              "perfumery",
+              "tires",
+              "electronics",
+              "pharma",
+              "milk",
+              "bicycle",
+              "wheelchairs",
+              "alcohol",
+              "otp",
+              "water",
+              "furs",
+              "beer",
+              "ncp",
+              "bio",
+              "antiseptic",
+              "petfood",
+              "seafood",
+              "nabeer",
+              "softdrinks",
+              "vegs",
+              "meat",
+              "toys"
+            ]
+          }
+        },
+        "productionOrderIds": {
+          "type": "array",
+          "example": [
+            "f49075a7-e997-4642-89da-6b6facc15f0a",
+            "f49077a7-e997-4642-89da-6b6facc15f0a"
+          ],
+          "description": "Production order ID, array of strings (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0433\u043E \u0437\u0430\u043A\u0430\u0437\u0430, \u043C\u0430\u0441\u0441\u0438\u0432 \u0441\u0442\u0440\u043E\u043A)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "resultCodes": {
+          "type": "array",
+          "example": [],
+          "description": "The status in which the transaction should be. Array of values (\u0421\u0442\u0430\u0442\u0443\u0441 \u0432 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0434\u043E\u043B\u0436\u043D\u0430 \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0441\u044F \u0442\u0440\u0430\u043D\u0437\u0430\u043A\u0446\u0438\u044F, \u043C\u0430\u0441\u0441\u0438\u0432 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0439)",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "resultDocIds": {
+          "type": "array",
+          "example": [
+            "f49075a7-e997-4642-89da-6b6facc15f0a",
+            "f49077a7-e997-4642-89da-6b6facc15f0a"
+          ],
+          "description": "Resulting ticket ID, array of strings. (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0438\u0440\u0443\u044E\u0449\u0435\u0439 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0438, \u043C\u0430\u0441\u0441\u0438\u0432 \u0441\u0442\u0440\u043E\u043A)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "results": {
+          "type": "object"
+        },
+        "serviceProviderIds": {
+          "type": "array",
+          "example": [
+            "f49075a7-e997-4642-89da-6b6facc15f0a"
+          ],
+          "description": "Service provider ID, array of strings. (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0441\u0435\u0440\u0432\u0438\u0441-\u043F\u0440\u043E\u0432\u0430\u0439\u0434\u0435\u0440\u0430, \u043C\u0430\u0441\u0441\u0438\u0432 \u0441\u0442\u0440\u043E\u043A)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sourceDocIds": {
+          "type": "array",
+          "example": [
+            "f49075a7-e997-4642-89da-6b6facc15f0a"
+          ],
+          "description": "Source document ID, array of strings. (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0438\u0441\u0445\u043E\u0434\u043D\u043E\u0433\u043E \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430, \u043C\u0430\u0441\u0441\u0438\u0432 \u0441\u0442\u0440\u043E\u043A)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "startCreateDocDate": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1632480396000,
+          "description": "Transaction search range by creation date of the source document, start date. (\u0414\u0438\u0430\u043F\u0430\u0437\u043E\u043D \u043F\u043E\u0438\u0441\u043A\u0430 \u0442\u0440\u0430\u043D\u0437\u0430\u043A\u0446\u0438\u0439 \u043F\u043E \u0434\u0430\u0442\u0435 \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u044F \u0438\u0441\u0445\u043E\u0434\u043D\u043E\u0433\u043E \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430, \u0434\u0430\u0442\u0430 \u043D\u0430\u0447\u0430\u043B\u0430)"
+        },
+        "startStartDocDate": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1632480396000,
+          "description": "Transaction search range by transaction start date, start date. (\u0414\u0438\u0430\u043F\u0430\u0437\u043E\u043D \u043F\u043E\u0438\u0441\u043A\u0430 \u0442\u0440\u0430\u043D\u0437\u0430\u043A\u0446\u0438\u0439 \u043F\u043E \u0434\u0430\u0442\u0435 \u043D\u0430\u0447\u0430\u043B\u0430 \u0442\u0440\u0430\u043D\u0437\u0430\u043A\u0446\u0438\u0438, \u0434\u0430\u0442\u0430 \u043D\u0430\u0447\u0430\u043B\u0430)"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "Search receipt options (\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430 \u043A\u0432\u0438\u0442\u0430\u043D\u0446\u0438\u0439)"
+    },
     "SearchDocumentResultDto": {
       "type": "object",
       "properties": {
@@ -39983,11 +41627,6 @@
         "usageType"
       ],
       "properties": {
-        "capacity": {
-          "type": "number",
-          "example": 1.001,
-          "description": "Capacity/Weight (\u041E\u0431\u044A\u0435\u043C/\u041C\u0430\u0441\u0441\u0430)"
-        },
         "cisType": {
           "type": "string",
           "example": "UNIT",
