@@ -148,11 +148,6 @@
           "Name": "COMMISSION",
           "Type": "string",
           "IsRequired": false
-        },
-        {
-          "Name": "CONTRACT_PRODUCTION",
-          "Type": "string",
-          "IsRequired": false
         }
       ]
     },
