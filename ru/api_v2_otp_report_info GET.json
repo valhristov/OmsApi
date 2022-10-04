@@ -87,6 +87,21 @@
               "Name": "PROCESSED",
               "Type": "string",
               "IsRequired": false
+            },
+            {
+              "Name": "SUCCESS",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "FAILED",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "PARTIALLY",
+              "Type": "string",
+              "IsRequired": false
             }
           ]
         }
