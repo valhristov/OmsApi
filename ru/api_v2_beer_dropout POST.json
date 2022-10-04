@@ -95,6 +95,11 @@
           "IsRequired": false
         },
         {
+          "Name": "OWN_USE_EXCISE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
           "Name": "OTHER",
           "Type": "string",
           "IsRequired": false

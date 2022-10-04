@@ -145,6 +145,11 @@
           "IsRequired": false
         },
         {
+          "Name": "producer",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
           "Name": "quantity",
           "Type": "integer",
           "IsRequired": true
@@ -196,6 +201,11 @@
         },
         {
           "Name": "COMMISSION",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "REAPPLY",
           "Type": "string",
           "IsRequired": false
         }
