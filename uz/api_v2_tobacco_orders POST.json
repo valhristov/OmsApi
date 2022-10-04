@@ -1,0 +1,237 @@
+{
+  "Path": "api/v2/{industry}/orders",
+  "Method": "post",
+  "QueryStringParamters": [
+    {
+      "Name": "omsId",
+      "Type": "string",
+      "IsRequired": true
+    }
+  ],
+  "RequestHeaders": [
+    {
+      "Name": "clientToken",
+      "Type": "string",
+      "IsRequired": true
+    }
+  ],
+  "RequestObjects": [
+    {
+      "Name": "OrderDto",
+      "Properties": [
+        {
+          "Name": "expectedStartDate",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "factoryAddress",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "factoryCountry",
+          "Type": "string",
+          "IsRequired": true
+        },
+        {
+          "Name": "factoryId",
+          "Type": "string",
+          "IsRequired": true
+        },
+        {
+          "Name": "factoryName",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "poNumber",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "productCode",
+          "Type": "string",
+          "IsRequired": true
+        },
+        {
+          "Name": "productDescription",
+          "Type": "string",
+          "IsRequired": true
+        },
+        {
+          "Name": "productionLineId",
+          "Type": "string",
+          "IsRequired": true
+        },
+        {
+          "Name": "products",
+          "Type": "OrderProduct[]",
+          "IsRequired": true
+        },
+        {
+          "Name": "serviceProviderId",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    },
+    {
+      "Name": "OrderProduct",
+      "Properties": [
+        {
+          "Name": "gtin",
+          "Type": "string",
+          "IsRequired": true
+        },
+        {
+          "Name": "quantity",
+          "Type": "integer",
+          "IsRequired": true
+        },
+        {
+          "Name": "serialNumberType",
+          "Type": "SerialNumberTypeEnum",
+          "IsRequired": true
+        },
+        {
+          "Name": "serialNumbers",
+          "Type": "array",
+          "IsRequired": false
+        },
+        {
+          "Name": "stickerId",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "templateId",
+          "Type": "integer",
+          "IsRequired": true
+        }
+      ]
+    },
+    {
+      "Name": "SerialNumberTypeEnum",
+      "Properties": [
+        {
+          "Name": "SELF_MADE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "OPERATOR",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    }
+  ],
+  "Responses": [
+    {
+      "StatusCode": 200,
+      "ResponseObjects": [
+        {
+          "Name": "OrderResult",
+          "Properties": [
+            {
+              "Name": "expectedCompleteTimestamp",
+              "Type": "integer",
+              "IsRequired": true
+            },
+            {
+              "Name": "omsId",
+              "Type": "string",
+              "IsRequired": true
+            },
+            {
+              "Name": "orderId",
+              "Type": "string",
+              "IsRequired": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 400,
+      "ResponseObjects": [
+        {
+          "Name": "RestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "ProtobeansFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "array",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "ProtobeansFieldError",
+          "Properties": [
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 500,
+      "ResponseObjects": [
+        {
+          "Name": "RestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "ProtobeansFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "array",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "ProtobeansFieldError",
+          "Properties": [
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

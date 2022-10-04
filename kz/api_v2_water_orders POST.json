@@ -1,0 +1,1562 @@
+{
+  "Path": "api/v2/{industry}/orders",
+  "Method": "post",
+  "QueryStringParamters": [
+    {
+      "Name": "omsId",
+      "Type": "string",
+      "IsRequired": true
+    }
+  ],
+  "RequestHeaders": [
+    {
+      "Name": "clientToken",
+      "Type": "string",
+      "IsRequired": true
+    }
+  ],
+  "RequestObjects": [
+    {
+      "Name": "OrderDto",
+      "Properties": [
+        {
+          "Name": "country",
+          "Type": "CountryEnum",
+          "IsRequired": false
+        },
+        {
+          "Name": "createMethodType",
+          "Type": "CreateMethodTypeEnum",
+          "IsRequired": true
+        },
+        {
+          "Name": "productionOrderId",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "products",
+          "Type": "OrderProduct[]",
+          "IsRequired": true
+        },
+        {
+          "Name": "releaseMethodType",
+          "Type": "ReleaseMethodTypeEnum",
+          "IsRequired": false
+        },
+        {
+          "Name": "serviceProviderId",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    },
+    {
+      "Name": "CountryEnum",
+      "Properties": [
+        {
+          "Name": "AU",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "AT",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "AZ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "AX",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "AL",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "DZ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "AS",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "AI",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "AO",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "AD",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "AQ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "AG",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "AR",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "AM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "AW",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "AF",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BS",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BD",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BB",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BH",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BY",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BZ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BJ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BG",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BO",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BQ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BA",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BW",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BR",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "IO",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BN",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BV",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BF",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BI",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BT",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "VU",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GB",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "HU",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "VE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "VG",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "VI",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "VN",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GA",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "HT",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GY",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GH",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GP",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GT",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GN",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GW",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "DE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GG",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GI",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "HN",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "HK",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GD",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GL",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GR",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GU",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "DK",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CD",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "JE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "DJ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "DM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "DO",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "EU",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "EG",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "ZM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "EH",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "ZW",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "IL",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "IN",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "ID",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "JO",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "IQ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "IR",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "IE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "IS",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "ES",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "IT",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "YE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CV",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "KZ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "KH",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CA",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "QA",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "KE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CY",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "KI",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CN",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CC",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CO",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "KM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CG",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "KP",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CR",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CI",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CU",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "KW",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "KG",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CW",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "LA",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "LS",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "LR",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "LB",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "LY",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "LT",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "LI",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "LU",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MU",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MR",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MG",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "YT",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MO",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MK",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MW",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MY",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "ML",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "UM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MV",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MT",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MA",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MQ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MH",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MX",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "FM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MZ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MD",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MC",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MN",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MS",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "NA",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "NR",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "NP",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "NE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "NG",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "NL",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "NI",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "NU",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "NZ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "NC",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "NO",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "AE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "OM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "IM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "NF",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CX",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SH",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "HM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "KY",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CK",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "TC",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PK",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PW",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PS",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PA",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "VA",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PG",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PY",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PN",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PL",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PT",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PR",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "KR",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "LV",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "RE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "RU",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "RW",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "RO",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "WS",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "ST",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SA",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SZ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "VC",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "LC",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MP",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SC",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BL",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SN",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "MF",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SX",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "KN",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "RS",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SG",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SY",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SK",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SI",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "US",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SB",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SO",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SD",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SR",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SL",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "TJ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "TH",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "TW",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "TZ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "TL",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "TG",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "TK",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "TO",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "TT",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "TV",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "TN",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "TM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "TR",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "UG",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "UZ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "UA",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "WF",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "UY",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "FO",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "FJ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PH",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "FI",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "FK",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "FR",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GF",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PF",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "TF",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "HR",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CF",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "TD",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "ME",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CZ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CL",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CH",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SJ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "LK",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "EC",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GQ",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SV",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "ER",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "EE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "ET",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GS",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "ZA",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "JM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "JP",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    },
+    {
+      "Name": "CreateMethodTypeEnum",
+      "Properties": [
+        {
+          "Name": "SELF_MADE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CEM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CL",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CA",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    },
+    {
+      "Name": "OrderProduct",
+      "Properties": [
+        {
+          "Name": "cisType",
+          "Type": "CisTypeEnum",
+          "IsRequired": false
+        },
+        {
+          "Name": "gtin",
+          "Type": "string",
+          "IsRequired": true
+        },
+        {
+          "Name": "quantity",
+          "Type": "integer",
+          "IsRequired": true
+        },
+        {
+          "Name": "serialNumberType",
+          "Type": "SerialNumberTypeEnum",
+          "IsRequired": true
+        },
+        {
+          "Name": "serialNumbers",
+          "Type": "array",
+          "IsRequired": false
+        },
+        {
+          "Name": "stickerId",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "templateId",
+          "Type": "integer",
+          "IsRequired": true
+        }
+      ]
+    },
+    {
+      "Name": "ReleaseMethodTypeEnum",
+      "Properties": [
+        {
+          "Name": "PRODUCTION",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "IMPORT",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "REMAINS",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CROSSBORDER",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "REMARK",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CONTRACT_PRODUCTION",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "COMMISSION",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    },
+    {
+      "Name": "CisTypeEnum",
+      "Properties": [
+        {
+          "Name": "UNIT",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BUNDLE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SET",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GROUP",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    },
+    {
+      "Name": "SerialNumberTypeEnum",
+      "Properties": [
+        {
+          "Name": "SELF_MADE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "OPERATOR",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    }
+  ],
+  "Responses": [
+    {
+      "StatusCode": 200,
+      "ResponseObjects": [
+        {
+          "Name": "OrderResult",
+          "Properties": [
+            {
+              "Name": "expectedCompleteTimestamp",
+              "Type": "integer",
+              "IsRequired": true
+            },
+            {
+              "Name": "omsId",
+              "Type": "string",
+              "IsRequired": true
+            },
+            {
+              "Name": "orderId",
+              "Type": "string",
+              "IsRequired": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 400,
+      "ResponseObjects": [
+        {
+          "Name": "RestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "ProtobeansFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "array",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "ProtobeansFieldError",
+          "Properties": [
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 500,
+      "ResponseObjects": [
+        {
+          "Name": "RestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "ProtobeansFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "array",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "ProtobeansFieldError",
+          "Properties": [
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

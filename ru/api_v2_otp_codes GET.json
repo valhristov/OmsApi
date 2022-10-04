@@ -1,0 +1,246 @@
+{
+  "Path": "api/v2/{industry}/codes",
+  "Method": "get",
+  "QueryStringParamters": [
+    {
+      "Name": "gtin",
+      "Type": "string",
+      "IsRequired": true
+    },
+    {
+      "Name": "lastBlockId",
+      "Type": "string",
+      "IsRequired": false
+    },
+    {
+      "Name": "omsId",
+      "Type": "string",
+      "IsRequired": true
+    },
+    {
+      "Name": "orderId",
+      "Type": "string",
+      "IsRequired": true
+    },
+    {
+      "Name": "quantity",
+      "Type": "integer",
+      "IsRequired": true
+    }
+  ],
+  "RequestHeaders": [
+    {
+      "Name": "clientToken",
+      "Type": "string",
+      "IsRequired": true
+    }
+  ],
+  "RequestObjects": [],
+  "Responses": [
+    {
+      "StatusCode": 200,
+      "ResponseObjects": [
+        {
+          "Name": "CodesDto",
+          "Properties": [
+            {
+              "Name": "blockId",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "codes",
+              "Type": "array",
+              "IsRequired": false
+            },
+            {
+              "Name": "omsId",
+              "Type": "string",
+              "IsRequired": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 400,
+      "ResponseObjects": [
+        {
+          "Name": "OmsRestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "OmsApiFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "OmsApiGlobalError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "OmsApiFieldError",
+          "Properties": [
+            {
+              "Name": "errorCode",
+              "Type": "integer",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "OmsApiGlobalError",
+          "Properties": [
+            {
+              "Name": "error",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "errorCode",
+              "Type": "integer",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 404,
+      "ResponseObjects": [
+        {
+          "Name": "OmsRestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "OmsApiFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "OmsApiGlobalError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "OmsApiFieldError",
+          "Properties": [
+            {
+              "Name": "errorCode",
+              "Type": "integer",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "OmsApiGlobalError",
+          "Properties": [
+            {
+              "Name": "error",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "errorCode",
+              "Type": "integer",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 500,
+      "ResponseObjects": [
+        {
+          "Name": "OmsRestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "OmsApiFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "OmsApiGlobalError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "OmsApiFieldError",
+          "Properties": [
+            {
+              "Name": "errorCode",
+              "Type": "integer",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "OmsApiGlobalError",
+          "Properties": [
+            {
+              "Name": "error",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "errorCode",
+              "Type": "integer",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

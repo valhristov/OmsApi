@@ -1,0 +1,197 @@
+{
+  "Path": "api/v2/{industry}/aggregation",
+  "Method": "post",
+  "QueryStringParamters": [
+    {
+      "Name": "omsId",
+      "Type": "string",
+      "IsRequired": true
+    }
+  ],
+  "RequestHeaders": [
+    {
+      "Name": "clientToken",
+      "Type": "string",
+      "IsRequired": true
+    },
+    {
+      "Name": "userName",
+      "Type": "string",
+      "IsRequired": false
+    }
+  ],
+  "RequestObjects": [
+    {
+      "Name": "AggregationReportDto",
+      "Properties": [
+        {
+          "Name": "aggregationUnits",
+          "Type": "AggregationUnit[]",
+          "IsRequired": true
+        },
+        {
+          "Name": "participantId",
+          "Type": "string",
+          "IsRequired": true
+        },
+        {
+          "Name": "productionLineId",
+          "Type": "string",
+          "IsRequired": true
+        },
+        {
+          "Name": "productionOrderId",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    },
+    {
+      "Name": "AggregationUnit",
+      "Properties": [
+        {
+          "Name": "aggregatedItemsCount",
+          "Type": "integer",
+          "IsRequired": true
+        },
+        {
+          "Name": "aggregationType",
+          "Type": "AggregationTypeEnum",
+          "IsRequired": true
+        },
+        {
+          "Name": "aggregationUnitCapacity",
+          "Type": "integer",
+          "IsRequired": true
+        },
+        {
+          "Name": "sntins",
+          "Type": "array",
+          "IsRequired": true
+        },
+        {
+          "Name": "unitSerialNumber",
+          "Type": "string",
+          "IsRequired": true
+        }
+      ]
+    },
+    {
+      "Name": "AggregationTypeEnum",
+      "Properties": [
+        {
+          "Name": "AGGREGATION",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "UPDATE",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    }
+  ],
+  "Responses": [
+    {
+      "StatusCode": 200,
+      "ResponseObjects": [
+        {
+          "Name": "ReportResult",
+          "Properties": [
+            {
+              "Name": "omsId",
+              "Type": "string",
+              "IsRequired": true
+            },
+            {
+              "Name": "reportId",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 400,
+      "ResponseObjects": [
+        {
+          "Name": "RestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "ProtobeansFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "array",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "ProtobeansFieldError",
+          "Properties": [
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 500,
+      "ResponseObjects": [
+        {
+          "Name": "RestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "ProtobeansFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "array",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "ProtobeansFieldError",
+          "Properties": [
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

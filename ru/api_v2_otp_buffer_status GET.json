@@ -1,0 +1,416 @@
+{
+  "Path": "api/v2/{industry}/buffer/status",
+  "Method": "get",
+  "QueryStringParamters": [
+    {
+      "Name": "gtin",
+      "Type": "string",
+      "IsRequired": true
+    },
+    {
+      "Name": "omsId",
+      "Type": "string",
+      "IsRequired": true
+    },
+    {
+      "Name": "orderId",
+      "Type": "string",
+      "IsRequired": true
+    }
+  ],
+  "RequestHeaders": [
+    {
+      "Name": "clientToken",
+      "Type": "string",
+      "IsRequired": true
+    }
+  ],
+  "RequestObjects": [],
+  "Responses": [
+    {
+      "StatusCode": 200,
+      "ResponseObjects": [
+        {
+          "Name": "BufferInfo",
+          "Properties": [
+            {
+              "Name": "availableCodes",
+              "Type": "integer",
+              "IsRequired": true
+            },
+            {
+              "Name": "bufferStatus",
+              "Type": "BufferStatusEnum",
+              "IsRequired": true
+            },
+            {
+              "Name": "expiredDate",
+              "Type": "integer",
+              "IsRequired": false
+            },
+            {
+              "Name": "gtin",
+              "Type": "string",
+              "IsRequired": true
+            },
+            {
+              "Name": "gtinProductAttributes",
+              "Type": "object",
+              "IsRequired": false
+            },
+            {
+              "Name": "leftInBuffer",
+              "Type": "integer",
+              "IsRequired": true
+            },
+            {
+              "Name": "omsId",
+              "Type": "string",
+              "IsRequired": true
+            },
+            {
+              "Name": "orderId",
+              "Type": "string",
+              "IsRequired": true
+            },
+            {
+              "Name": "poolInfos",
+              "Type": "PoolInfo[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "poolsExhausted",
+              "Type": "boolean",
+              "IsRequired": true
+            },
+            {
+              "Name": "productionOrderId",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "rejectionReason",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "totalCodes",
+              "Type": "integer",
+              "IsRequired": true
+            },
+            {
+              "Name": "totalPassed",
+              "Type": "integer",
+              "IsRequired": true
+            },
+            {
+              "Name": "unavailableCodes",
+              "Type": "integer",
+              "IsRequired": true
+            }
+          ]
+        },
+        {
+          "Name": "BufferStatusEnum",
+          "Properties": [
+            {
+              "Name": "PENDING",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "ACTIVE",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "EXHAUSTED",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "REJECTED",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "CLOSED",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "PoolInfo",
+          "Properties": [
+            {
+              "Name": "isRegistrarReady",
+              "Type": "boolean",
+              "IsRequired": true
+            },
+            {
+              "Name": "lastRegistrarErrorTimestamp",
+              "Type": "integer",
+              "IsRequired": true
+            },
+            {
+              "Name": "leftInRegistrar",
+              "Type": "integer",
+              "IsRequired": true
+            },
+            {
+              "Name": "quantity",
+              "Type": "integer",
+              "IsRequired": true
+            },
+            {
+              "Name": "registrarErrorCount",
+              "Type": "integer",
+              "IsRequired": true
+            },
+            {
+              "Name": "registrarId",
+              "Type": "string",
+              "IsRequired": true
+            },
+            {
+              "Name": "rejectionReason",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "status",
+              "Type": "StatusEnum",
+              "IsRequired": true
+            }
+          ]
+        },
+        {
+          "Name": "StatusEnum",
+          "Properties": [
+            {
+              "Name": "ER_NOT_AVAILABLE",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "REQUEST_ERROR",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "REQUESTED",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "IN_PROCESS",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "READY",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "CLOSED",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "DELETED",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "REJECTED",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 400,
+      "ResponseObjects": [
+        {
+          "Name": "OmsRestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "OmsApiFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "OmsApiGlobalError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "OmsApiFieldError",
+          "Properties": [
+            {
+              "Name": "errorCode",
+              "Type": "integer",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "OmsApiGlobalError",
+          "Properties": [
+            {
+              "Name": "error",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "errorCode",
+              "Type": "integer",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 404,
+      "ResponseObjects": [
+        {
+          "Name": "OmsRestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "OmsApiFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "OmsApiGlobalError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "OmsApiFieldError",
+          "Properties": [
+            {
+              "Name": "errorCode",
+              "Type": "integer",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "OmsApiGlobalError",
+          "Properties": [
+            {
+              "Name": "error",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "errorCode",
+              "Type": "integer",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 500,
+      "ResponseObjects": [
+        {
+          "Name": "OmsRestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "OmsApiFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "OmsApiGlobalError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "OmsApiFieldError",
+          "Properties": [
+            {
+              "Name": "errorCode",
+              "Type": "integer",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "OmsApiGlobalError",
+          "Properties": [
+            {
+              "Name": "error",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "errorCode",
+              "Type": "integer",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

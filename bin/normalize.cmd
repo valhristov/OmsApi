@@ -4,9 +4,7 @@ cd..
 
 set %date% = date /t
 
-bin\ApiNormalizer.exe %date%
-
-copy %date%\*.json . /s
+bin\ApiNormalizer.exe .
 
 git add .
 git commit -m %date%

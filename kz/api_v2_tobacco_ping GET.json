@@ -1,0 +1,116 @@
+{
+  "Path": "api/v2/{industry}/ping",
+  "Method": "get",
+  "QueryStringParamters": [
+    {
+      "Name": "omsId",
+      "Type": "string",
+      "IsRequired": true
+    }
+  ],
+  "RequestHeaders": [
+    {
+      "Name": "clientToken",
+      "Type": "string",
+      "IsRequired": true
+    }
+  ],
+  "RequestObjects": [],
+  "Responses": [
+    {
+      "StatusCode": 200,
+      "ResponseObjects": [
+        {
+          "Name": "OMSIdentifier",
+          "Properties": [
+            {
+              "Name": "omsId",
+              "Type": "string",
+              "IsRequired": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 400,
+      "ResponseObjects": [
+        {
+          "Name": "RestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "ProtobeansFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "array",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "ProtobeansFieldError",
+          "Properties": [
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 500,
+      "ResponseObjects": [
+        {
+          "Name": "RestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "ProtobeansFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "array",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "ProtobeansFieldError",
+          "Properties": [
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

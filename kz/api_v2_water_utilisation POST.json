@@ -1,0 +1,177 @@
+{
+  "Path": "api/v2/{industry}/utilisation",
+  "Method": "post",
+  "QueryStringParamters": [
+    {
+      "Name": "omsId",
+      "Type": "string",
+      "IsRequired": true
+    }
+  ],
+  "RequestHeaders": [
+    {
+      "Name": "clientToken",
+      "Type": "string",
+      "IsRequired": true
+    },
+    {
+      "Name": "userName",
+      "Type": "string",
+      "IsRequired": false
+    }
+  ],
+  "RequestObjects": [
+    {
+      "Name": "UtilisationReportDto",
+      "Properties": [
+        {
+          "Name": "sntins",
+          "Type": "array",
+          "IsRequired": true
+        },
+        {
+          "Name": "sourceReportId",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "usageType",
+          "Type": "UsageTypeEnum",
+          "IsRequired": true
+        }
+      ]
+    },
+    {
+      "Name": "UsageTypeEnum",
+      "Properties": [
+        {
+          "Name": "USED_FOR_PRODUCTION",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SENT_TO_PRINTER",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PRINTED",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PRINTER_LOST",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "VERIFIED",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    }
+  ],
+  "Responses": [
+    {
+      "StatusCode": 200,
+      "ResponseObjects": [
+        {
+          "Name": "ReportResult",
+          "Properties": [
+            {
+              "Name": "omsId",
+              "Type": "string",
+              "IsRequired": true
+            },
+            {
+              "Name": "reportId",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 400,
+      "ResponseObjects": [
+        {
+          "Name": "RestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "ProtobeansFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "array",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "ProtobeansFieldError",
+          "Properties": [
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 500,
+      "ResponseObjects": [
+        {
+          "Name": "RestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "ProtobeansFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "array",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "ProtobeansFieldError",
+          "Properties": [
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

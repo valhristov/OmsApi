@@ -1,0 +1,242 @@
+{
+  "Path": "api/v2/{industry}/dropout",
+  "Method": "post",
+  "QueryStringParamters": [
+    {
+      "Name": "omsId",
+      "Type": "string",
+      "IsRequired": true
+    }
+  ],
+  "RequestHeaders": [
+    {
+      "Name": "clientToken",
+      "Type": "string",
+      "IsRequired": true
+    },
+    {
+      "Name": "userName",
+      "Type": "string",
+      "IsRequired": false
+    }
+  ],
+  "RequestObjects": [
+    {
+      "Name": "DropoutReportDto",
+      "Properties": [
+        {
+          "Name": "address",
+          "Type": "string",
+          "IsRequired": true
+        },
+        {
+          "Name": "dropoutReason",
+          "Type": "DropoutReasonEnum",
+          "IsRequired": true
+        },
+        {
+          "Name": "participantId",
+          "Type": "string",
+          "IsRequired": true
+        },
+        {
+          "Name": "productionLineId",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "productionOrderId",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "sntins",
+          "Type": "array",
+          "IsRequired": true
+        },
+        {
+          "Name": "sourceDocDate",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "sourceDocNum",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "withChild",
+          "Type": "boolean",
+          "IsRequired": true
+        }
+      ]
+    },
+    {
+      "Name": "DropoutReasonEnum",
+      "Properties": [
+        {
+          "Name": "DEFECT",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "EXPIRY",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "QA_SAMPLES",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PRODUCT_RECALL",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "COMPLAINTS",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "PRODUCT_TESTING",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "DEMO_SAMPLES",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "DAMAGE_LOSS",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "DESTRUCTION",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "LIQUIDATION",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CONFISCATION",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "OTHER",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    }
+  ],
+  "Responses": [
+    {
+      "StatusCode": 200,
+      "ResponseObjects": [
+        {
+          "Name": "ReportResult",
+          "Properties": [
+            {
+              "Name": "omsId",
+              "Type": "string",
+              "IsRequired": true
+            },
+            {
+              "Name": "reportId",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 400,
+      "ResponseObjects": [
+        {
+          "Name": "RestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "ProtobeansFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "array",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "ProtobeansFieldError",
+          "Properties": [
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 500,
+      "ResponseObjects": [
+        {
+          "Name": "RestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "ProtobeansFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "array",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "ProtobeansFieldError",
+          "Properties": [
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,347 @@
+{
+  "Path": "api/v2/{industry}/orders",
+  "Method": "post",
+  "QueryStringParamters": [
+    {
+      "Name": "omsId",
+      "Type": "string",
+      "IsRequired": true
+    }
+  ],
+  "RequestHeaders": [
+    {
+      "Name": "clientToken",
+      "Type": "string",
+      "IsRequired": true
+    }
+  ],
+  "RequestObjects": [
+    {
+      "Name": "OrderDto",
+      "Properties": [
+        {
+          "Name": "contactPerson",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "createMethodType",
+          "Type": "CreateMethodTypeEnum",
+          "IsRequired": true
+        },
+        {
+          "Name": "productionOrderId",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "products",
+          "Type": "OrderProduct[]",
+          "IsRequired": true
+        },
+        {
+          "Name": "releaseMethodType",
+          "Type": "ReleaseMethodTypeEnum",
+          "IsRequired": true
+        },
+        {
+          "Name": "serviceProviderId",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    },
+    {
+      "Name": "CreateMethodTypeEnum",
+      "Properties": [
+        {
+          "Name": "SELF_MADE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CEM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CM",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CL",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CA",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    },
+    {
+      "Name": "OrderProduct",
+      "Properties": [
+        {
+          "Name": "cisType",
+          "Type": "CisTypeEnum",
+          "IsRequired": false
+        },
+        {
+          "Name": "gtin",
+          "Type": "string",
+          "IsRequired": true
+        },
+        {
+          "Name": "quantity",
+          "Type": "integer",
+          "IsRequired": true
+        },
+        {
+          "Name": "serialNumberType",
+          "Type": "SerialNumberTypeEnum",
+          "IsRequired": true
+        },
+        {
+          "Name": "serialNumbers",
+          "Type": "array",
+          "IsRequired": false
+        },
+        {
+          "Name": "templateId",
+          "Type": "integer",
+          "IsRequired": true
+        }
+      ]
+    },
+    {
+      "Name": "ReleaseMethodTypeEnum",
+      "Properties": [
+        {
+          "Name": "PRODUCTION",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "IMPORT",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "REMAINS",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CROSSBORDER",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "REMARK",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "COMMISSION",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "CONTRACT_PRODUCTION",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    },
+    {
+      "Name": "CisTypeEnum",
+      "Properties": [
+        {
+          "Name": "UNIT",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "BUNDLE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "SET",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "GROUP",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    },
+    {
+      "Name": "SerialNumberTypeEnum",
+      "Properties": [
+        {
+          "Name": "SELF_MADE",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
+          "Name": "OPERATOR",
+          "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    }
+  ],
+  "Responses": [
+    {
+      "StatusCode": 200,
+      "ResponseObjects": [
+        {
+          "Name": "OrderResult",
+          "Properties": [
+            {
+              "Name": "expectedCompleteTimestamp",
+              "Type": "integer",
+              "IsRequired": true
+            },
+            {
+              "Name": "omsId",
+              "Type": "string",
+              "IsRequired": true
+            },
+            {
+              "Name": "orderId",
+              "Type": "string",
+              "IsRequired": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 400,
+      "ResponseObjects": [
+        {
+          "Name": "OmsRestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "OmsApiFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "OmsApiGlobalError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "OmsApiFieldError",
+          "Properties": [
+            {
+              "Name": "errorCode",
+              "Type": "integer",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "OmsApiGlobalError",
+          "Properties": [
+            {
+              "Name": "error",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "errorCode",
+              "Type": "integer",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StatusCode": 500,
+      "ResponseObjects": [
+        {
+          "Name": "OmsRestResult",
+          "Properties": [
+            {
+              "Name": "fieldErrors",
+              "Type": "OmsApiFieldError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "globalErrors",
+              "Type": "OmsApiGlobalError[]",
+              "IsRequired": false
+            },
+            {
+              "Name": "success",
+              "Type": "boolean",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "OmsApiFieldError",
+          "Properties": [
+            {
+              "Name": "errorCode",
+              "Type": "integer",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldError",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "fieldName",
+              "Type": "string",
+              "IsRequired": false
+            }
+          ]
+        },
+        {
+          "Name": "OmsApiGlobalError",
+          "Properties": [
+            {
+              "Name": "error",
+              "Type": "string",
+              "IsRequired": false
+            },
+            {
+              "Name": "errorCode",
+              "Type": "integer",
+              "IsRequired": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
