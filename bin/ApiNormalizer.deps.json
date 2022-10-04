@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ApiNormalizer/1.0.0": {
+        "dependencies": {
+          "ApiComparer": "1.0.0",
+          "ApiComparer.Swagger": "1.0.0"
+        },
+        "runtime": {
+          "ApiNormalizer.dll": {}
+        }
+      },
+      "ApiComparer/1.0.0": {
+        "runtime": {
+          "ApiComparer.dll": {}
+        }
+      },
+      "ApiComparer.Swagger/1.0.0": {
+        "dependencies": {
+          "ApiComparer": "1.0.0"
+        },
+        "runtime": {
+          "ApiComparer.Swagger.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ApiNormalizer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ApiComparer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ApiComparer.Swagger/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
