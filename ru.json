@@ -39368,8 +39368,7 @@
     "OrderDtoPharma": {
       "type": "object",
       "required": [
-        "products",
-        "subjectId"
+        "products"
       ],
       "properties": {
         "freeCode": {
@@ -39396,11 +39395,6 @@
         },
         "serviceProviderId": {
           "type": "string"
-        },
-        "subjectId": {
-          "type": "string",
-          "example": "subjectId",
-          "description": "Subject ID (\u0421\u0443\u0431\u044A\u0435\u043A\u0442 \u043E\u0431\u0440\u0430\u0449\u0435\u043D\u0438\u044F)"
         }
       },
       "title": "OrderDtoPharma",
