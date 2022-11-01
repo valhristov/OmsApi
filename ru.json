@@ -2714,11 +2714,31 @@
             "type": "string"
           },
           {
+            "name": "limit",
+            "in": "query",
+            "description": "\u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435, \u043A\u043E\u0442\u043E\u0440\u043E\u0435 \u0443\u0441\u0442\u0430\u043D\u0430\u0432\u043B\u0438\u0432\u0430\u0435\u0442 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0437\u0430\u043F\u0438\u0441\u0435\u0439 \u0432 \u043E\u0442\u0432\u0435\u0442\u0435",
+            "required": false,
+            "type": "integer",
+            "default": 50,
+            "format": "int32",
+            "allowEmptyValue": false
+          },
+          {
             "name": "omsId",
             "in": "query",
             "description": "OMS Id (\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0421\u0423\u0417)",
             "required": true,
             "type": "string",
+            "allowEmptyValue": false
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "description": "\u041D\u043E\u043C\u0435\u0440 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u044B",
+            "required": false,
+            "type": "integer",
+            "default": 1,
+            "format": "int32",
             "allowEmptyValue": false
           }
         ],
@@ -38454,6 +38474,63 @@
         }
       },
       "title": "FilteredRequestReceipt"
+    },
+    "ManufactureDto": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "countryCode": {
+          "type": "string"
+        },
+        "fiasId": {
+          "type": "string"
+        },
+        "groupIds": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "kpp": {
+          "type": "string"
+        },
+        "lines": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "mod": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "ManufactureDto"
+    },
+    "ManufacturesDto": {
+      "type": "object",
+      "properties": {
+        "manufactureInfo": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ManufactureDto"
+          }
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "ManufacturesDto"
     },
     "OMSIdentifier": {
       "type": "object",
