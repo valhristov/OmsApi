@@ -14265,7 +14265,7 @@
           },
           {
             "in": "body",
-            "name": "orderDtoNcp",
+            "name": "orderDto",
             "description": "Order Description (\u0411\u0438\u0437\u043D\u0435\u0441-\u0437\u0430\u043A\u0430\u0437)",
             "required": true,
             "schema": {
@@ -36629,7 +36629,7 @@
           },
           {
             "in": "body",
-            "name": "orderDtoWheelchairs",
+            "name": "orderDto",
             "description": "Order Description (\u0411\u0438\u0437\u043D\u0435\u0441-\u0437\u0430\u043A\u0430\u0437)",
             "required": true,
             "schema": {
@@ -40143,6 +40143,7 @@
     "OrderProductAntiseptic": {
       "type": "object",
       "required": [
+        "cisType",
         "gtin",
         "quantity",
         "serialNumberType",
@@ -40151,6 +40152,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "UNIT",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",
@@ -40215,6 +40218,7 @@
     "OrderProductBeer": {
       "type": "object",
       "required": [
+        "cisType",
         "gtin",
         "quantity",
         "serialNumberType",
@@ -40223,6 +40227,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "UNIT",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",
@@ -40350,6 +40356,7 @@
     "OrderProductBio": {
       "type": "object",
       "required": [
+        "cisType",
         "gtin",
         "quantity",
         "serialNumberType",
@@ -40358,6 +40365,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "UNIT",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",
@@ -40422,6 +40431,7 @@
     "OrderProductFashion": {
       "type": "object",
       "required": [
+        "cisType",
         "gtin",
         "quantity",
         "serialNumberType",
@@ -40430,6 +40440,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "UNIT",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",
@@ -40499,6 +40511,7 @@
     "OrderProductMeat": {
       "type": "object",
       "required": [
+        "cisType",
         "gtin",
         "quantity",
         "serialNumberType",
@@ -40507,6 +40520,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "UNIT",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",
@@ -40576,6 +40591,7 @@
     "OrderProductMilk": {
       "type": "object",
       "required": [
+        "cisType",
         "gtin",
         "quantity",
         "serialNumberType",
@@ -40584,6 +40600,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "UNIT",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",
@@ -40653,6 +40671,7 @@
     "OrderProductNabeer": {
       "type": "object",
       "required": [
+        "cisType",
         "gtin",
         "quantity",
         "serialNumberType",
@@ -40661,6 +40680,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "UNIT",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",
@@ -40738,6 +40759,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "GROUP",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",
@@ -40802,6 +40825,7 @@
     "OrderProductOtp": {
       "type": "object",
       "required": [
+        "cisType",
         "gtin",
         "quantity",
         "serialNumberType",
@@ -40810,6 +40834,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "UNIT",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",
@@ -40879,6 +40905,7 @@
     "OrderProductPerfum": {
       "type": "object",
       "required": [
+        "cisType",
         "gtin",
         "quantity",
         "serialNumberType",
@@ -40887,6 +40914,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "UNIT",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",
@@ -40956,6 +40985,7 @@
     "OrderProductPetfood": {
       "type": "object",
       "required": [
+        "cisType",
         "gtin",
         "quantity",
         "serialNumberType",
@@ -40964,6 +40994,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "UNIT",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",
@@ -41096,6 +41128,7 @@
     "OrderProductPhoto": {
       "type": "object",
       "required": [
+        "cisType",
         "gtin",
         "quantity",
         "serialNumberType",
@@ -41104,6 +41137,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "UNIT",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",
@@ -41173,6 +41208,7 @@
     "OrderProductSeafood": {
       "type": "object",
       "required": [
+        "cisType",
         "gtin",
         "quantity",
         "serialNumberType",
@@ -41181,6 +41217,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "UNIT",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",
@@ -41318,6 +41356,7 @@
     "OrderProductSoftdrinks": {
       "type": "object",
       "required": [
+        "cisType",
         "gtin",
         "quantity",
         "serialNumberType",
@@ -41326,6 +41365,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "UNIT",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",
@@ -41532,6 +41573,7 @@
     "OrderProductToys": {
       "type": "object",
       "required": [
+        "cisType",
         "gtin",
         "quantity",
         "serialNumberType",
@@ -41540,6 +41582,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "UNIT",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",
@@ -41609,6 +41653,7 @@
     "OrderProductVegs": {
       "type": "object",
       "required": [
+        "cisType",
         "gtin",
         "quantity",
         "serialNumberType",
@@ -41617,6 +41662,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "UNIT",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",
@@ -41686,6 +41733,7 @@
     "OrderProductWater": {
       "type": "object",
       "required": [
+        "cisType",
         "gtin",
         "quantity",
         "serialNumberType",
@@ -41694,6 +41742,8 @@
       "properties": {
         "cisType": {
           "type": "string",
+          "example": "UNIT",
+          "description": "\u0422\u0438\u043F \u043A\u043E\u0434\u0430 \u043C\u0430\u0440\u043A\u0438\u0440\u043E\u0432\u043A\u0438",
           "enum": [
             "UNIT",
             "BUNDLE",

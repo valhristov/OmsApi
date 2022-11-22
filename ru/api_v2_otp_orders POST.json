@@ -137,7 +137,7 @@
         {
           "Name": "cisType",
           "Type": "CisTypeEnum",
-          "IsRequired": false
+          "IsRequired": true
         },
         {
           "Name": "gtin",
