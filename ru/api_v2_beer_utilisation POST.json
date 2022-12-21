@@ -25,6 +25,11 @@
       "Name": "UtilisationReportDto",
       "Properties": [
         {
+          "Name": "expirationDate",
+          "Type": "string",
+          "IsRequired": true
+        },
+        {
           "Name": "fiasId",
           "Type": "string",
           "IsRequired": false
@@ -42,7 +47,7 @@
         {
           "Name": "productionDate",
           "Type": "string",
-          "IsRequired": false
+          "IsRequired": true
         },
         {
           "Name": "sntins",
