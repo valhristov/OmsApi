@@ -30,6 +30,11 @@
           "IsRequired": true
         },
         {
+          "Name": "paymentType",
+          "Type": "PaymentTypeEnum",
+          "IsRequired": false
+        },
+        {
           "Name": "productionOrderId",
           "Type": "string",
           "IsRequired": false
@@ -77,6 +82,21 @@
         {
           "Name": "CA",
           "Type": "string",
+          "IsRequired": false
+        }
+      ]
+    },
+    {
+      "Name": "PaymentTypeEnum",
+      "Properties": [
+        {
+          "Name": "1",
+          "Type": "integer",
+          "IsRequired": false
+        },
+        {
+          "Name": "2",
+          "Type": "integer",
           "IsRequired": false
         }
       ]

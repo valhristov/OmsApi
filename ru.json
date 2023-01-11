@@ -38692,6 +38692,16 @@
             "CA"
           ]
         },
+        "paymentType": {
+          "type": "integer",
+          "format": "int32",
+          "example": 1,
+          "description": "Payment Type (\u0422\u0438\u043F \u043E\u043F\u043B\u0430\u0442\u044B: 1 - \u041E\u043F\u043B\u0430\u0442\u0430 \u043F\u043E \u044D\u043C\u0438\u0441\u0441\u0438\u0438, 2 - \u041E\u043F\u043B\u0430\u0442\u0430 \u043F\u043E \u043D\u0430\u043D\u0435\u0441\u0435\u043D\u0438\u044E (\u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u043F\u043E \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E)",
+          "enum": [
+            1,
+            2
+          ]
+        },
         "productionOrderId": {
           "type": "string",
           "example": "63b5d1cd-919b-4cef-b117-2ce59059bc33",
