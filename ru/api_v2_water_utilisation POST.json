@@ -25,6 +25,11 @@
       "Name": "UtilisationReportDto",
       "Properties": [
         {
+          "Name": "expirationDate",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
           "Name": "sntins",
           "Type": "array",
           "IsRequired": true
