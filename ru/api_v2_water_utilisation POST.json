@@ -25,6 +25,11 @@
       "Name": "UtilisationReportDto",
       "Properties": [
         {
+          "Name": "expDate",
+          "Type": "string",
+          "IsRequired": false
+        },
+        {
           "Name": "expirationDate",
           "Type": "string",
           "IsRequired": false
