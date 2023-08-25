@@ -14341,7 +14341,7 @@
           },
           {
             "in": "body",
-            "name": "orderDto",
+            "name": "orderDtoNcp",
             "description": "Order Description (\u0411\u0438\u0437\u043D\u0435\u0441-\u0437\u0430\u043A\u0430\u0437)",
             "required": true,
             "schema": {
@@ -36915,7 +36915,7 @@
           },
           {
             "in": "body",
-            "name": "orderDto",
+            "name": "orderDtoWheelchairs",
             "description": "Order Description (\u0411\u0438\u0437\u043D\u0435\u0441-\u0437\u0430\u043A\u0430\u0437)",
             "required": true,
             "schema": {
